@@ -5,29 +5,17 @@ const Signin = () => {
   const navigate = useNavigate();
   const [rememberMe, setRememberMe] = useState(false);
 
-  // Handle Remember Me toggle
-  const handleRememberMe = () => {
-    setRememberMe(!rememberMe);
-  };
+  const handleRememberMe = () => setRememberMe(!rememberMe);
 
-  // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // Mock authentication logic
     console.log("User signed in");
     console.log("Remember Me:", rememberMe);
-
-    // Navigate to dashboard or home after successful login
     navigate("/dashboard");
   };
 
-  // Mock Google Sign-In function
   const handleGoogleSignIn = () => {
     console.log("Signing in with Google...");
-    // You can integrate Google OAuth here
-
-    // Redirect after successful login
     navigate("/dashboard");
   };
 
@@ -37,6 +25,7 @@ const Signin = () => {
       style={{ backgroundColor: "oklch(0.929 0.013 255.508)" }}
     >
       <div className="relative bg-white p-12 rounded-xl shadow-lg w-[500px] shadow-[0_0_15px_rgba(255,223,128,0.5)] border border-gray-300 text-justify">
+        
         {/* Close Button */}
         <button
           onClick={() => navigate("/")}
@@ -60,6 +49,7 @@ const Signin = () => {
         {/* Form */}
         <div className="pt-6 sm:mx-auto sm:w-full sm:max-w-sm">
           <form className="space-y-6" onSubmit={handleSubmit}>
+            
             {/* Email Input */}
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-900">
@@ -83,11 +73,12 @@ const Signin = () => {
                 <label htmlFor="password" className="block text-sm font-medium text-gray-900">
                   Password
                 </label>
-                <div className="text-sm">
-                  <a href="#" className="font-semibold text-gray-600 hover:text-gray-500">
-                    Forgot password?
-                  </a>
-                </div>
+                <a
+                  href="#"
+                  className="text-sm font-semibold text-gray-600 hover:text-gray-500"
+                >
+                  Forgot password?
+                </a>
               </div>
               <div className="pt-2">
                 <input
@@ -109,9 +100,9 @@ const Signin = () => {
                 name="rememberMe"
                 checked={rememberMe}
                 onChange={handleRememberMe}
-                className=" h-4 w-4 text-gray-600 border-gray-300 rounded focus:ring-gray-500"
+                className="h-4 w-4 text-gray-600 border-gray-300 rounded focus:ring-gray-500"
               />
-              <label htmlFor="rememberMe" className="pt-2 pl-2 pb-2 block text-sm text-gray-900">
+              <label htmlFor="rememberMe" className="pl-2 block text-sm text-gray-900">
                 Remember me
               </label>
             </div>
@@ -127,14 +118,16 @@ const Signin = () => {
             </div>
           </form>
 
-          {/* Divider Line */}
-          <div className=" p-5 flex items-center my-4">
+          {/* Divider */}
+          <div className="p-5 flex items-center my-4">
             <div className="flex-1 h-px bg-gray-300"></div>
-            <span className="px-3 text-gray-500 text-sm whitespace-nowrap">or continue with</span>
+            <span className="px-3 text-gray-500 text-sm whitespace-nowrap">
+              or continue with
+            </span>
             <div className="flex-1 h-px bg-gray-300"></div>
           </div>
 
-          {/* Continue with Google Button */}
+          {/* Google Sign-In */}
           <div className="flex items-center justify-center">
             <button
               onClick={handleGoogleSignIn}

@@ -7,10 +7,14 @@ const products = {
   Clothing: [
     { id: 1, name: "Oversized Hoodie", price: "₹3,750", image: "./src/assets/images/2011WbeigeD-1_800x.webp" },
     { id: 2, name: "Minimalist T-shirt", price: "₹2,500", image: "./src/assets/images/MHOO916_1.jpg" },
+    { id: 3, name: "Oversized Hoodie", price: "₹3,750", image: "./src/assets/images/2011WbeigeD-1_800x.webp" },
+    { id: 4, name: "Minimalist T-shirt", price: "₹2,500", image: "./src/assets/images/MHOO916_1.jpg" },
   ],
   Footwear: [
     { id: 3, name: "Chunky Sneakers", price: "₹6,800", image: "./src/assets/images/Lana_I_800x.webp" },
     { id: 4, name: "Luxury Heels", price: "₹8,300", image: "./src/assets/images/05d1e173-abca-46c8-adb1-7db8eae7b8fe-500x500.webp" },
+    { id: 5, name: "Chunky Sneakers", price: "₹6,800", image: "./src/assets/images/Lana_I_800x.webp" },
+    { id: 6, name: "Luxury Heels", price: "₹8,300", image: "./src/assets/images/05d1e173-abca-46c8-adb1-7db8eae7b8fe-500x500.webp" },
   ],
   Accessories: [
     { id: 5, name: "Gold Chain Necklace", price: "₹4,200", image: "./src/assets/images/BohoGypsyTextileJewelery-bunkojunko.webp" },

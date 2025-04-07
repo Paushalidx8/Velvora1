@@ -1,0 +1,2 @@
+MONGO_URI=mongodb+srv://paushali:AVc35_9qVWRYk9y@p5ecommerce.tyj2qzh.mongodb.net/auth-project?retryWrites=true&w=majority
+PORT=5000
